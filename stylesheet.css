@@ -13,7 +13,7 @@ body {
 
 .rekenmachine-img:hover {
     border: 5px solid #ff0000;
-    width: 8%;
+    width: 11%;
     height: auto;
     transition: all 0.3s ease;
 }
@@ -26,7 +26,7 @@ body {
 
 .strafCalculator-img:hover {
     border: 5px solid #ff0000;
-    width: 13%;
+    width: 17%;
     height: auto;
     transition: all 0.3s ease;
 }
