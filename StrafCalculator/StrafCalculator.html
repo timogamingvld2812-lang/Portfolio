@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strafmaatberekening — Springbank Roleplay</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <div class="brand">
+          <div class="kicker">SPRINGBANK ROLEPLAY — JUSTITIE</div>
+          <h1>Strafmaatberekening</h1>
+        </div>
+        <div class="sub">gebaseerd op het Wetboek Springbank<br>art. A4 — Strafbepaling</div>
+      </header>
+
+      <div class="grid">
+        <!-- LEFT: builder -->
+        <div>
+          <div class="panel">
+            <h2>1 — Zoek of kies een delict</h2>
+
+            <div class="field" style="position:relative;">
+              <label for="zoekInput">Zoek op naam, wetsartikel of steekwoord</label>
+              <input type="text" id="zoekInput" placeholder="bijv. diefstal, 310, wapen, snelheid…" autocomplete="off">
+              <div id="zoekResults"></div>
+            </div>
+
+            <div class="field">
+              <label for="titelSelect">Titel</label>
+              <select id="titelSelect"></select>
+            </div>
+
+            <div class="field">
+              <label for="artikelSelect">Artikel</label>
+              <select id="artikelSelect"></select>
+            </div>
+
+            <div id="dynamicArea"></div>
+
+            <div id="modArea" class="toggle-section"></div>
+
+            <div class="preview" id="previewBox"></div>
+
+            <div id="lookupTable"></div>
+
+            <button class="add" id="addBtn">Toevoegen aan zaak</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: charge list + totals -->
+        <div>
+          <div class="panel">
+            <h2>2 — Feiten in deze zaak</h2>
+            <ul class="charges" id="chargeList"></ul>
+            <div class="empty" id="emptyMsg">Nog geen feiten toegevoegd.</div>
+          </div>
+
+          <div class="totals">
+            <h2>Totale strafmaat</h2>
+            <div class="totalgrid">
+              <div class="totalcell">
+                <div class="tlabel">CELSTRAF</div>
+                <div class="tval" id="totCel">0 mnd</div>
+                <div class="tnote" id="totCelNote"></div>
+              </div>
+              <div class="totalcell">
+                <div class="tlabel">TAAKSTRAF</div>
+                <div class="tval" id="totTaak">0 uur</div>
+                <div class="tnote" id="totTaakNote"></div>
+              </div>
+              <div class="totalcell">
+                <div class="tlabel">BOETE</div>
+                <div class="tval" id="totBoete">€0</div>
+                <div class="tnote" id="totBoeteNote"></div>
+              </div>
+            </div>
+            <div class="cap-note">Bij zowel celstraf als taakstraf: taakstraf wordt gedeeld door 2 en opgeteld bij de celstraf.<br>Art. A4 lid 6: maximumcelstraf is 120 maanden. Overschrijding wordt omgezet naar €250,- boete per extra maand.</div>
+            <button class="clearbtn" id="clearBtn">Zaak wissen</button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="foot">
+        Rekentool voor intern gebruik binnen Springbank Roleplay, gebaseerd op de gepubliceerde artikelen op
+        <a href="https://wetboek.srp-fivem.nl/wetboek/" target="_blank" rel="noopener">wetboek.srp-fivem.nl</a>.
+        Uitkomsten zijn een hulpmiddel bij de strafeis en vervangen geen beoordeling door OvJ, hOvJ of rechter — o.a. verzachtende/verzwarende
+        omstandigheden (art. A4 lid 7-8, Titel VI) blijven altijd ter beoordeling.
+      </footer>
+    </div>
+    <a class="index_link"id="index_link" href="../index.html">Terug naar startpagina</a>
+    <script src="script.js"></script>
+  </body>
+</html>
